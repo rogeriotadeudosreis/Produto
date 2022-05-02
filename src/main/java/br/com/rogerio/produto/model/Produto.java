@@ -41,6 +41,8 @@ public class Produto {
     @Column(name = "PRECO_PRODUTO")
     private Double preco;
 
+    @NotNull
+    @NotEmpty
     @Column(name = "DATA_CADASTRO")
     private LocalDateTime dataCadastro;
 

@@ -24,8 +24,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "/produto", produces = MediaType.APPLICATION_JSON_VALUE)
-@RequiredArgsConstructor
+@RequestMapping(path = "/api/produto", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ProdutoController {
 
     @Autowired
@@ -59,7 +58,7 @@ public class ProdutoController {
         return ResponseEntity.ok(lista);
     }
 
-    @DeleteMapping("/deletar/{id}")
+    @DeleteMapping("/excluir/{id}")
     public ResponseEntity<?> excluir(@PathVariable Long id) {
         Optional<Produto> optional = service.findById(id);
         if (optional.isPresent()) {
